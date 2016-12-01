@@ -5,9 +5,9 @@ public class Sort {
 		int[] array = { 49, 38, 65, 97, 76, 13, 27, 49 };
 		// customSort(array);
 		// bubbleSort(array);
-		// selectSort(array);
+//		selectSort(array);
 		// quickSort(array, 0, array.length - 1);
-		insertSort(array);
+		 insertSort(array);
 
 		input(array);
 	}
@@ -41,11 +41,11 @@ public class Sort {
 	// Ã°ÅÝ
 	public static void bubbleSort(int[] array) {
 		for (int i = 0; i < array.length; i++) {
-			for (int j = i; j < array.length - i; j++) {
-				if (array[i] > array[j]) {
+			for (int j = 0; j < array.length - i - 1; j++) {
+				if (array[j + 1] > array[j]) {
 					int temp = array[j];
-					array[j] = array[i];
-					array[i] = temp;
+					array[j] = array[j + 1];
+					array[j + 1] = temp;
 				}
 			}
 		}
@@ -53,9 +53,10 @@ public class Sort {
 
 	// Ñ¡Ôñ
 	public static void selectSort(int[] array) {
-		for (int i = 0; i < array.length - 1; i++) {
-			int min = i;
-			for (int j = i + 1; j < array.length; j++) {
+		int i, j, min;
+		for (i = 0; i < array.length - 1; i++) {
+			min = i;
+			for (j = i + 1; j < array.length; j++) {
 				if (array[j] < array[min]) {
 					min = j;
 				}
@@ -104,9 +105,7 @@ public class Sort {
 		int j, temp;
 		for (int i = 1; i < array.length; i++) {
 			temp = array[i];
-			System.out.println("temp" + temp);
-			for (j = i; j > 0 && array[j - 1] > temp; j--) {
-				System.out.println("temp" + temp);
+			for (j = i; j > 0 && array[j - 1] < temp; j--) {
 				array[j] = array[j - 1];
 			}
 			array[j] = temp;
