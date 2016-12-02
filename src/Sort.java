@@ -5,11 +5,39 @@ public class Sort {
 		int[] array = { 49, 38, 65, 97, 76, 13, 27, 49 };
 		// customSort(array);
 		// bubbleSort(array);
-//		selectSort(array);
+		// selectSort(array);
 		// quickSort(array, 0, array.length - 1);
-		 insertSort(array);
+		// insertSort(array);
 
-		input(array);
+		// input(array);
+
+		int maxSize = 100;
+		ArrayInObj arr;
+		arr = new ArrayInObj(maxSize);
+		arr.insert("Amence", "Marry", 20);
+		arr.insert("Amence1", "Marry", 20);
+		arr.insert("Amence2", "Marry", 20);
+		arr.insert("Amence3", "Marry", 20);
+		arr.insert("Amence7", "Marry", 20);
+		arr.insert("Amence5", "Marry", 20);
+		arr.insert("Amence9", "Marry", 20);
+		arr.insert("Amence11", "Marry", 20);
+		arr.insert("Amenced", "Marry", 20);
+		arr.insert("Amencef", "Marry", 20);
+		arr.insert("Amencev", "Marry", 20);
+		arr.insert("Amences", "Marry", 20);
+		arr.insert("Amencez", "Marry", 20);
+		arr.insert("Amenceh", "Marry", 20);
+		arr.insert("Amencej", "Marry", 20);
+		arr.insert("Amenceq", "Marry", 20);
+		System.out.print("排序之前：");
+		
+		arr.display();
+		
+		System.out.print("排序之后：");
+		arr.insertionSort();
+		arr.display();
+
 	}
 
 	public static void input(int[] array) {
